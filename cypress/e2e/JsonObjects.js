@@ -13,12 +13,12 @@ describe("JSON Objects", () => {
       { key3: "value3" },
     ];
 
-    const typeOfData = { string: "this is a strinf", number: 10 };
+    const typeOfData = { string: "this is a string", number: 10 };
 
     //Create an Object
     const mix = {
       FirstName: "Sara",
-      LastName: "Hussein",
+      LastName: "Hussien",
       Age: 123,
       Students: [
         {
@@ -37,7 +37,7 @@ describe("JSON Objects", () => {
     console.log(arrayOfObjects[2].key3);
     console.log(mix.Students[1].LasrName);
 
-    const lasNameOfSecondStudent = mix.Students[1].LasrName;
-    console.log(lasNameOfSecondStudent);
+    const lastNameOfSecondStudent = mix.Students[1].LastName;
+    console.log(lastNameOfSecondStudent);
   });
 });

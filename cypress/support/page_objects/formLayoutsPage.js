@@ -1,4 +1,5 @@
 export class FormLayoutsPage {
+  //Inline Form
   submitInlineFormWithNameAndEmail(name, email) {
     cy.contains("nb-card", "Inline form")
       .find("form")
@@ -10,6 +11,7 @@ export class FormLayoutsPage {
       });
   }
 
+  //Basic Form
   submitBasicFormWithEmailAndPassword(email, password) {
     cy.contains("nb-card", "Basic form")
       .find("form")

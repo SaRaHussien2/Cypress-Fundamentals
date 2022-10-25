@@ -18,16 +18,15 @@ describe("test with POM", () => {
     navigateTo.toasterPage();
   });
 
-  it.only("should submit Inline and Basic form and select tomorow date in the calendar", () => {
+  it.only("should submit Inline and Basic form and select tomorrow date in the calendar", () => {
     navigateTo.formLayoutsPage();
     onFormLayoutsPage.submitInlineFormWithNameAndEmail("Sara", "test@test.com");
-    onFormLayoutsPage.submitBasicFormWithEmailAndPassword(
-      "test@test.com",
-      "123456"
-    );
+    onFormLayoutsPage.submitBasicFormWithEmailAndPassword("test@test.com","123456");
+
     navigateTo.datepickerPage();
     onDatepickerPage.selectCommonDatepickerDateFromToday(1);
     onDatepickerPage.selectDatepickerWithRangeFromToday(7, 14);
+    
     navigateTo.smartTablePage();
     onSmartTablePage.addNewRecordWithFirstNameAndLastName("Sara", "Hussien");
     onSmartTablePage.updateAgeByFirstName("Sara", "123");

@@ -10,6 +10,7 @@ export class SmartTable {
         cy.wrap(tableRow).find("td").eq(6).should("contain", age);
       });
   }
+
   addNewRecordWithFirstNameAndLastName(firstName, lastName) {
     cy.get("thead").find(".nb-plus").click();
     cy.get("thead")
@@ -20,6 +21,7 @@ export class SmartTable {
         cy.wrap(tableRow).find('[placeholder = "Last Name"]').type(lastName);
         cy.wrap(tableRow).find(".nb-checkmark").click();
       });
+
     cy.get("tbody tr")
       .first()
       .find("td")
@@ -37,9 +39,7 @@ export class SmartTable {
       .find(".nb-trash")
       .click()
       .then(() => {
-        expect(stub.getCall(0)).to.be.calledWith(
-          "Are you sure you want to delete?"
-        );
+        expect(stub.getCall(0)).to.be.calledWith("Are you sure you want to delete?");
       });
   }
 }

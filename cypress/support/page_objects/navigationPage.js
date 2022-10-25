@@ -16,10 +16,10 @@ export class NavigationPage {
     selectGroupMenuItem("Form");
     cy.contains("Form Layouts").click();
   }
-  datepickerPage() {
-    //(brfore making func)=> cy.contains('Forms').click()
-    selectGroupMenuItem("Form");
 
+  datepickerPage() {
+    //(before making func)=> cy.contains('Forms').click()
+    selectGroupMenuItem("Form");
     cy.contains("Datepicker").click();
   }
 
@@ -32,6 +32,7 @@ export class NavigationPage {
     selectGroupMenuItem("Tables & Data");
     cy.contains("Smart Table").click();
   }
+
   tooltipPage() {
     selectGroupMenuItem("Modal & Overlays");
     cy.contains("Tooltip").click();

@@ -8,7 +8,6 @@ module.exports = defineConfig({
   // Viewport settings overridden for component tests
 
   e2e: {
-    defaultCommandTimeout: 10000,
     baseUrl: "http://localhost:4200",
 
     //without cy-anything.js
